@@ -35,6 +35,8 @@ class HomeController extends Controller
 
             $token = \GuzzleHttp\json_decode($result->getBody(), true);
 
+            echo $token['access_token'];
+
             if(isset($token['access_token'])) {
                 $resource = $client->request('POST','http://oncusp.com/ogaboss/d4m/resource/getResource', [
                     'form_params' => [
@@ -43,6 +45,8 @@ class HomeController extends Controller
                 ]);
 
                 $resourceBody = json_decode($resource->getBody(), true);
+
+                var_dump($resourceBody);
 
                 if($resourceBody['status'] == 'success') {
                     return view('user', ['user' => $resourceBody['data']]);
