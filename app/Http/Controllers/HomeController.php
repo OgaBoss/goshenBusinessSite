@@ -29,13 +29,11 @@ class HomeController extends Controller
                     'code'          => $code,
                     'client_id'     => 'a518d648aa2fb1ad',
                     'client_secret' => '917998fef463df03',
-                    'redirect_uri'  => 'http://localhost:8000/oauth2/callback'
+                    'redirect_uri'  => 'https://goshensoftinc.herokuapp.com/oauth2/callback'
                 ]
             ]);
 
             $token = \GuzzleHttp\json_decode($result->getBody(), true);
-
-            var_dump($token);
 
             if(isset($token['access_token'])) {
                 $resource = $client->request('POST','http://oncusp.com/ogaboss/d4m/resource/getResource', [
@@ -45,8 +43,6 @@ class HomeController extends Controller
                 ]);
 
                 $resourceBody = json_decode($resource->getBody(), true);
-
-                var_dump($resourceBody);
 
                 if($resourceBody['status'] == 'success') {
                     return view('user', ['user' => $resourceBody['data']]);
