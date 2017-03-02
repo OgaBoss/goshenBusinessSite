@@ -35,7 +35,7 @@ class HomeController extends Controller
 
             $token = \GuzzleHttp\json_decode($result->getBody(), true);
 
-            echo $token['access_token'];
+            var_dump($token);
 
             if(isset($token['access_token'])) {
                 $resource = $client->request('POST','http://oncusp.com/ogaboss/d4m/resource/getResource', [
