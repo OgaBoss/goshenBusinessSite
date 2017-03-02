@@ -79,15 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    GoshenSoftInc CORP.
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a target="_blank" href="http://oncusp.com/ogaboss/d4m/authorize/user_login?response_type=code&client_id=a518d648aa2fb1ad&redirect_uri=https%3A%2F%2Fgoshensoftinc.herokuapp.com%2Foauth2%2Fcallback">Login With Campus Credit</a>
                 </div>
             </div>
         </div>

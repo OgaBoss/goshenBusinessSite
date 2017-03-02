@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/oauth2/callback', [
+    'as'     => 'ouath2.callback',
+    'uses'   => 'HomeController@callBack'
+]);
