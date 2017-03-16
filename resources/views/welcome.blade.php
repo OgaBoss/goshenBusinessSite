@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a target="_blank" href="http://oncusp.com/ogaboss/d4m/authorize/user_login?response_type=code&client_id=a518d648aa2fb1ad&redirect_uri=https%3A%2F%2Fgoshensoftinc.herokuapp.com%2Foauth2%2Fcallback">Login With Campus Credit</a>
+                    <a target="_blank" href="https://deals4meals.com/authorize/user_login?response_type=code&client_id=a518d648aa2fb1ad&redirect_uri=https%3A%2F%2Fgoshensoftinc.herokuapp.com%2Foauth2%2Fcallback">Login With Campus Credit</a>
                 </div>
             </div>
         </div>
