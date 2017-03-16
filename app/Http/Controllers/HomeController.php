@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         if(!empty($code)){
             $client = new Client();
-            $result = $client->request('POST','http://oncusp.com/ogaboss/d4m/token/getToken', [
+            $result = $client->request('POST','https://deals4meals.com/token/getToken', [
                 'form_params' => [
                     'grant_type'    => 'authorization_code',
                     'code'          => $code,
@@ -36,7 +36,7 @@ class HomeController extends Controller
             $token = \GuzzleHttp\json_decode($result->getBody(), true);
 
             if(isset($token['access_token'])) {
-                $resource = $client->request('POST','http://oncusp.com/ogaboss/d4m/resource/getResource', [
+                $resource = $client->request('POST','https://deals4meals.com/resource/getResource', [
                     'form_params' => [
                         'access_token'    => $token['access_token']
                     ]
